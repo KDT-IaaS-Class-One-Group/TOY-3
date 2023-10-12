@@ -17,6 +17,6 @@ listCharts((err, charts) => {
     }
 
   }
-  
+  console.log(chartArray.join([]));
 });
 
