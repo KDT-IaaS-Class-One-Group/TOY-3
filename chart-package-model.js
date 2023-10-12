@@ -6,11 +6,12 @@ listCharts((err, charts) => {
   let chartArray = [];
   for (let i = 0; i < charts.length; i++){
     for (let j = chartArray.length; j <= chartArray.length; j++){
-        chartArray[j] = "<div>" + charts[i].name + " " + charts[i].url + "</div>";
+        chartArray[j] = "<a href = " + charts[i].url +">" + charts[i].name + "</a><br>";
 
-        fs.writeFile('billboard.html', '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title></head><body>' + chartArray.join([]) + '</body></html>', function() {
+        fs.writeFile('billboard.html', chartArray.join([]), function() {
           console.log('File created');
         });
+        
         break
         
       }
